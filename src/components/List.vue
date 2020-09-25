@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="item-list">
       <ul>
           <li
             v-for="item in items"
@@ -20,15 +20,11 @@ export default {
     components: {
         Item
     },
-    data () {
+    data() {
         return {
-            items: [
-                { title: 'Potteplante'},
-                { title: 'Rensemiddel til kaffemaskinen'},
-                { title: 'Bakepapir'},
-            ]
+            items: this.$store.state.items
         }
-    },
+    }
 }
 </script>
 
